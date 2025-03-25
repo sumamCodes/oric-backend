@@ -1,0 +1,82 @@
+# Compiled files
+*.dll
+*.exe
+*.so
+*.dylib
+*.pdb
+
+# Build directories
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs and database
+*.log
+*.sql
+*.sqlite
+
+# Visual Studio Code files
+.vscode/
+
+# Visual Studio working files
+.vs/
+.vsscc
+*.cache
+
+# Rider IDE files
+.idea/
+
+# Package directories
+node_modules/
+packages/
+
+# Generated files
+*.g.*
+*.generated.*
+
+# Backup & temporary files
+*.bak
+*.swp
+*.temp
+~$*
+
+# Publish outputs
+*.publishsettings
+publish/
+
+# Entity Framework
+*.edmx.sql
+*.edmx.diagram
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# ReSharper
+_ReSharper*/
+
+# DotCover
+*.dotCover
+
+# Coverage
+coverage/
+
+# Web server config
+*.config
+*.config.user
+appsettings.*.json
+
+appsettings.json
