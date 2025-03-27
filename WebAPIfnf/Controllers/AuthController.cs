@@ -28,11 +28,19 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        //[HttpGet("health")]
+        //public IActionResult HealthCheck()
+        //{
+        //    return Ok(new { status = "API is running" });
+        //}
+
         [HttpGet("health")]
         public IActionResult HealthCheck()
         {
+            _logger.LogInformation("HealthCheck endpoint was called.");
             return Ok(new { status = "API is running" });
         }
+
 
 
         [HttpPost("login")]
