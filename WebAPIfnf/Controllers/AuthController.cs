@@ -28,6 +28,13 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        [HttpGet("health")]
+        public IActionResult HealthCheck()
+        {
+            return Ok(new { status = "API is running" });
+        }
+
+
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginDto loginDto)
         {
