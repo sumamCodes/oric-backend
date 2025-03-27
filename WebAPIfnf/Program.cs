@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebApi.Data;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,16 @@ builder.Services.AddSwaggerGen();
 
 // Add Logging
 builder.Services.AddLogging();
+
+builder.Services.AddLogging(logging =>
+{
+    logging.ClearProviders();  // Remove default providers
+    logging.AddConsole();      // Ensure console logging is enabled
+    logging.AddDebug();        // Debug output (useful for local testing)
+    logging.SetMinimumLevel(LogLevel.Information);  // Set minimum log level
+});
+
+
 
 // Enable CORS to allow cross-origin requests
 builder.Services.AddCors(options =>
